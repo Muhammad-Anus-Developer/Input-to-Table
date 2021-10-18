@@ -1,0 +1,93 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.App {
+  text-align: center;
+}
+table {
+  display: flex;
+  justify-content: center;
+  border: 1px solid gray;
+}
+td {
+  border: 1px solid gray;
+  width: 30em;
+}
+#hi{
+  display: none;
+}
+.center{
+  margin: auto;
+  width: 350px;
+  padding: 0 50px;
+  text-align: center;
+  box-sizing: border-box;
+  transition: all .3s ease .3s;
+}
+.center button{
+  position: relative;
+  width: 50%;
+  border: none;
+  padding: 5px 0;
+  cursor: pointer;
+  outline: none;
+  border-radius: 35px;
+  background: linear-gradient(#575ce0, #4043a59f, #5357c9be);
+    transition: .5s;
+}
+button:hover{
+  background: linear-gradient(#474bc5, #4f53d4e1, #575ce9d0);
+}
+button p{
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 7px;
+}
+button .loading, button .tick{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+button .loading{
+  width: 0%;
+  border-radius: 50px;
+  background: linear-gradient(#3d42c2, #4043a59f, #5357c9be);
+}
+button .tick{
+  color: white;
+  font-size: 20px;
+  line-height: 65px;
+  transform: scale(0);
+  /* display: flex; */
+  /* justify-content: center; */
+  margin-left: 42%;
+  /* padding-bottom: 20px; */
+  /* align-items: center; */
+}
+.center.active{
+  padding: 0;
+}
+.center.active button{
+  background: #d9d9d9;
+  margin-top: 0;
+}
+.center.active button p{
+  display: none;
+}
+.center.active button .loading{
+  width: 100%;
+  transition: all 2.7s ease .4s;
+}
+.center.active button.success{
+  padding: 25px 10px;
+  width: 40%;
+}
+.center.active button.success .tick{
+  transform: scale(1);
+  transition: transform .2s linear .3s;
+}
